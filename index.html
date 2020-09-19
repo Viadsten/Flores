@@ -5,21 +5,29 @@
         <meta charset="utf-8">
         <link href="css/normalize.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">         <link href="css/style.css" rel="stylesheet">
-        <title>ArtD</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;300;400;500;700&display=swap" rel="stylesheet">         <link href="css/style.css" rel="stylesheet">
+        <title>FLORES</title>
         <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     </head>
     <body class="page">
-      <svg style="display: none;">
-        <symbol viewBox="0 0 16 16" id="login-icon">
-          <path class="st0" d="M0 7h7V4.1L11 8l-4 3.9V9.1L0 9z"/><path class="st0" d="M7 0v2h7v12H7v2h9V0z"/>
-        </symbol>
-      </svg>
         <header class="header">
           <nav class="header__nav">
-            <a class="header__logo" href="#index">
-              <img src="img/artd.svg" class="header__logo-image" alt="Логотип ArtD" width="51" height="27">
-            </a>
+            <div class="header__user-nav">
+              <a class="header__logo" href="#index">
+                <img src="img/logo.png" class="header__logo-image" alt="Логотип FLORES" width="35" height="32">
+                FLORES
+              </a>
+              <div class="header__user-nav-wrapper">
+                <button type="button" class="header__login header__login--tel"><img width="23" height="22" class="tel-icon" src="img/tel-icon.svg">
+                  8 (800) 410-56-56
+                  <a href="#" class="header__tel-btn-link">Обратный звонок</a>
+                </button>
+                <button type="button" class="header__login"><img width="23" height="23" class="search-icon" src="img/search-icon.svg">Поиск</button>
+                <button type="button" class="header__login header__login--basket">
+                  <img width="34" height="26" src="img/basket.svg" class="basket-icon"><figure class="header__basket-push">1</figure>
+                  </button>
+              </div>
+            </div>
             <button type="menu" class="header__toggle">
               <span class="toggle__line toggle__line_first"></span>
               <span class="toggle__line toggle__line_second"></span>
@@ -27,23 +35,22 @@
             </button>
             <div class="header__nav-wrapper" id="navigation">
               <div class="header__nav-links">
-              <a class="header__link-wrapper header__link-wrapper--first" href="#">Доставка</a>
+              <a class="header__link-wrapper header__link-wrapper--first" href="#">Каталог</a>
+              <a class="header__link-wrapper" href="#">Доставка</a>
               <a class="header__link-wrapper" href="#">Наши проекты</a>
+              <a class="header__link-wrapper" href="#">О компании</a>
+              <a class="header__link-wrapper" href="#">Контакты</a>
             </div>
-              <div class="header__user-nav">
-                <button type="button" class="header__login"><img width="20" height="20" class="login-icon" src="img/login-icon-4x.png">Войти</button>
-                <button type="button" class="header__login header__login--basket">
-                  <img width="20" height="20" src="img/basket-icon-4x.png" class="basket-icon"><figure class="header__basket-push">1</figure>
-                  Корзина</button>
-                <button type="button" class="header__login"><img width="21" height="17" class="search-icon" src="img/search-icon-4x.png">Поиск</button>
-              </div>
+              
             </div>
           </nav>
         </header>
         <main class="page-main">
+          <div class="main__header-bg">
             <header class="main__header">
-              <h1 class="main__h1">Магазин дизайнерской мебели</h1>
-              <img class="main__sofa" src="img/Sofa.png" alt="диван">
+              <h1 class="main__h1">Доставка цветов и подарков</h1>
+              <h2 class="main__h2">Радуйте своих близких нашими стильными букетами и уникальными розами</h2>
+              <a class="main__header-btn" href="#catalog">Выбрать букет</a>
               <div class="form__radio">
                 <div class="radio">
                   <input class="custom-radio" type="radio" id="r1" name="instrument" value="1" checked>
@@ -58,389 +65,156 @@
                   <label for="r3"></label>
                </div>
             </header>
-            <section class="categories">
-              <div class="categories__card-wrapper">
-                <div class="categories__card">
-                  <h2 class="categories__h2">Свет</h2>
-                  <img class="categories__image--light" src="img/lighters.png" alt="Светильники">
+          </div>
+          <section class="advantages">
+            <ul class="advantages__list">
+              <li class="advantages__item">
+                <img class="advantages__img" src="img/adv1.svg" alt="Банк карты" width="55" height="40">
+                <p class="advantages__description">Бесплатная доставка по<br>Москве и области</p>
+              </li>
+              <li class="advantages__item advantages__item--2clmn">
+                <img class="advantages__img" src="img/adv2.svg" alt="Грузовичок" width="54" height="45">
+                <p class="advantages__description">Оплачивайте любым<br>доступным способом</p>
+              </li>
+              <li class="advantages__item">
+                <img class="advantages__img" src="img/adv3.svg" alt="Обмен" width="45" height="50">
+                <p class="advantages__description">Только свежие цветы<br>Ежедневные поставки</p>
+              </li>
+              <li class="advantages__item advantages__item--2clmn">
+                <img class="advantages__img" src="img/adv4.svg" alt="Красивый сертификат" width="50" height="45">
+                <p class="advantages__description">Фото цветов перед<br>отправкой</p>
+              </li>
+            </ul>
+          </section>
+          <section class="product">
+            <div class="product__nav">
+              <button class="product__btn" type="menu">
+                <span class="btn__line btn__line_first"></span>
+                <span class="btn__line btn__line_second"></span>
+                <span class="btn__line btn__line_third"></span>
+              </button>
+              <h2 class="product__h2">Каталог</h2>
+              <button class="product__price-btn" type="button">По цене</button>
+              <button class="product__ABC-btn" type="button">По алфавиту</button>
+              <div class="product__catalog-nav" id="popup-category">
+                <div class="product__popup-1clmn">
+                  <button type="button" tabindex="0" class="product__category-btn product__category-btn--1">Розы<img src="img/arrow.svg" class="btn__arrow"></button>
+                  <ul class="product__nav-list" id="category-rose--1">
+                    <li class="product__list-item"><a href="#">Подкатегория</a></li>
+                  </ul>
                 </div>
-                <div class="categories__card">
-                  <h2 class="categories__h2">Кресла</h2>
-                  <img class="categories__image--chair" src="img/chair.png" alt="Кресла">
-                </div>
-                <div class="categories__card">
-                  <h2 class="categories__h2">Кровати</h2>
-                  <img class="categories__image--bed" src="img/bed.png" alt="Кровати">
-                </div>
-                <div class="categories__card">
-                  <h2 class="categories__h2">Диваны</h2>
-                  <img class="categories__image--couch" src="img/couch.png" alt="Диваны">
-                </div>
-                <div class="categories__card">
-                  <h2 class="categories__h2">Столы</h2>
-                  <img class="categories__image--light" src="img/lighters.png" alt="Светильники">
-                </div>
-                <div class="categories__card">
-                  <h2 class="categories__h2">Пуфы</h2>
-                  <img class="categories__image--chair" src="img/chair.png" alt="Кресла">
-                </div>
-                <div class="categories__card">
-                  <h2 class="categories__h2">Софа</h2>
-                  <img class="categories__image--bed" src="img/bed.png" alt="Кровати">
-                </div>
-                <div class="categories__card">
-                  <h2 class="categories__h2">Стулья</h2>
-                  <img class="categories__image--couch" src="img/couch.png" alt="Диваны">
-                </div>
-                <a class="categories__link" href="#">Показать ещё</a>
-              </div>
-            </section>
-            <section class="sale">
-              <div class="sale__card-wrapper">
-                <h2 class="sale__h2">Скидки в этом сезоне</h2>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--1">-10%</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--1" src="img/table-glass.png" alt="Стол из стекла">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Стол из стекла с<br>металлическими ножками</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__old-price">13999р</p>
-                    <p class="sale__new-price">10999р</p>
-                  </div>
-                </div>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--2">-10%</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--2" src="img/sale-chair.png" alt="Кресло из замши">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Кресло из замши на<br>деревянных ножках</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__old-price">9890р</p>
-                    <p class="sale__new-price">7999р</p>
-                  </div>
-                </div>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--3">-10%</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--3" src="img/sale-chair1.png" alt="Стул из дерева">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Стул из дерева с замшевой<br>обивкой</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__old-price">13999р</p>
-                    <p class="sale__new-price">10999р</p>
-                  </div>
-                </div>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--4">-10%</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--4" src="img/sale-light.png" alt="Торшер лакированный">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Торшер лакированный на<br>четырех ножках</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__old-price">13999р</p>
-                    <p class="sale__new-price">10999р</p>
-                  </div>
-                </div>
-                <a class="sale__more" href="#">Показать все предложения >></a>
-              </div>
-            </section>
-            <section class="best">
-              <div class="best__card-wrapper">
-                <div class="best__card">
-                  <h3 class="best__h3">Весенние распродажи<br>мебели в гостинную<br>до 60%.</h3>
-                  <img class="best__image--1" alt="Красный диван" src="img/coach-best.png">
-                </div>
-                <div class="best__card">
-                  <h3 class="best__h3 best__h3--2">Лучшие дизайнерские<br>идеи 2020.</h3>
-                  <img class="best__image--2" alt="Красное кресло" src="img/chair-best.png">
-                </div>
-                <div class="best__card best__card--3">
-                  <h3 class="best__h3 best__h3--3">Стильные торшеры,<br>для любого уголка<br>вашей квартиры.</h3>
-                  <img class="best__image--3" alt="Лампа большая" src="img/lighters-best.png">
+                <div class="product__popup-2clmn">
+                  <button type="button" class="product__category-btn product__category-btn--2">Розы<img src="img/arrow.svg" class="btn__arrow"></button>
+                  <ul class="product__nav-list" id="category-rose--2">
+                    <li class="product__list-item"><a href="#">Подкатегория</a></li>
+                  </ul>
                 </div>
               </div>
-            </section>
-            <section class="sale">
-              <div class="sale__card-wrapper">
-                <h2 class="sale__h2">Хит сезона и новые поступления</h2>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--1 new__mark">NEW</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--1" src="img/table-glass.png" alt="Стол из стекла">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Стол из стекла с<br>металлическими ножками</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__new-price hit__price">10999р</p>
-                  </div>
+            </div>
+            <div class="product__card-wrapper">
+              <div class="product__card">
+                <div class="product__img-wrapper"><img class="product__img" src="img/floor1.png"></div>
+                <p class="product__name">Шляпная коробка</p>
+                <p class="product__price">1 200 &#8381</p>
+                <button class="product__buy-btn"><img src="img/basket.svg" width="16" height="22px" class="product__buy-btn-img">В корзину</button>
+              </div>
+              <div class="product__card">
+                <div class="product__img-wrapper"><img class="product__img" src="img/floor2.png"></div>
+                <p class="product__name">Шляпная коробка</p>
+                <p class="product__price">1 200 &#8381</p>
+                <button class="product__buy-btn"><img src="img/basket.svg" width="16" height="22px" class="product__buy-btn-img">В корзину</button>
+              </div>
+              <div class="product__card">
+                <div class="product__img-wrapper"><img class="product__img" src="img/floor3.png"></div>
+                <p class="product__name">Шляпная коробка</p>
+                <p class="product__price">1 200 &#8381</p>
+                <button class="product__buy-btn"><img src="img/basket.svg" width="16" height="22px" class="product__buy-btn-img">В корзину</button>
+              </div>
+              <div class="product__card">
+                <div class="product__img-wrapper"><img class="product__img" src="img/floor4.png"></div>
+                <p class="product__name">Шляпная коробка</p>
+                <p class="product__price">1 200 &#8381</p>
+                <button class="product__buy-btn"><img src="img/basket.svg" width="16" height="22px" class="product__buy-btn-img">В корзину</button>
+              </div>
+              <div class="product__card">
+                <div class="product__img-wrapper"><img class="product__img" src="img/floor3.png"></div>
+                <p class="product__name">Шляпная коробка</p>
+                <p class="product__price">1 200 &#8381</p>
+                <button class="product__buy-btn"><img src="img/basket.svg" width="16" height="22px" class="product__buy-btn-img">В корзину</button>
+              </div>
+              <div class="product__card">
+                <div class="product__img-wrapper"><img class="product__img" src="img/floor4.png"></div>
+                <p class="product__name">Шляпная коробка</p>
+                <p class="product__price">1 200 &#8381</p>
+                <button class="product__buy-btn"><img src="img/basket.svg" width="16" height="22px" class="product__buy-btn-img">В корзину</button>
+              </div>
+              <div class="product__card">
+                <div class="product__img-wrapper"><img class="product__img" src="img/floor1.png"></div>
+                <p class="product__name">Шляпная коробка</p>
+                <p class="product__price">1 200 &#8381</p>
+                <button class="product__buy-btn"><img src="img/basket.svg" width="16" height="22px" class="product__buy-btn-img">В корзину</button>
+              </div>
+              <div class="product__card">
+                <div class="product__img-wrapper"><img class="product__img" src="img/floor2.png"></div>
+                <p class="product__name">Шляпная коробка</p>
+                <p class="product__price">1 200 &#8381</p>
+                <button class="product__buy-btn"><img src="img/basket.svg" width="16" height="22px" class="product__buy-btn-img">В корзину</button>
+              </div>
+              <button type="button" class="product__more-btn">Показать больше</button>
+            </div>
+          </section>
+            <section class="delivery">
+              <h2 class="delivery__h2">Доставка</h2>
+              <hr class="delivery__h2-line">
+              <div class="delivery__adv-wrapper">
+                <div class="delivery__adv">
+                  <h3 class="delivery__h3">Подбор<br>букета</h3>
+                  <hr class="delivery__h3-line">
+                  <p class="delivery__description">Помощь флориста в выборе подходящего букета</p>
+                  <figure class="delivery__circle"><img class="delivery__icon" src="img/floor-icon.png" width="39" height="39"></figure>
                 </div>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--2 new__mark">NEW</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--2" src="img/sale-chair.png" alt="Кресло из замши">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Кресло из замши на<br>деревянных ножках</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__new-price hit__price">7999р</p>
-                  </div>
+                <div class="delivery__adv">
+                  <h3 class="delivery__h3">Оплата</h3>
+                  <hr class="delivery__h3-line">
+                  <p class="delivery__description">Наличный и безналичный способы оплаты</p>
+                  <figure class="delivery__circle"><img class="delivery__icon" src="img/wallet-icon.png" width="43" height="37"></figure>
                 </div>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--3 hit__mark">ХИТ</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--3" src="img/sale-chair1.png" alt="Стул из дерева">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Стул из дерева с замшевой<br>обивкой</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__new-price hit__price">10999р</p>
-                  </div>
-                </div>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--4 hit__mark">ХИТ</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--4" src="img/sale-light.png" alt="Торшер лакированный">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Торшер лакированный на<br>четырех ножках</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__new-price hit__price">10999р</p>
-                  </div>
-                </div>
-                <a class="sale__more" href="#">Показать все предложения >></a>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--1 new__mark">NEW</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--1" src="img/table-glass.png" alt="Стол из стекла">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Стол из стекла с<br>металлическими ножками</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__new-price hit__price">10999р</p>
-                  </div>
-                </div>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--2 new__mark">NEW</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--2" src="img/sale-chair.png" alt="Кресло из замши">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Кресло из замши на<br>деревянных ножках</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__new-price hit__price">7999р</p>
-                  </div>
-                </div>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--3 hit__mark">ХИТ</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--3" src="img/sale-chair1.png" alt="Стул из дерева">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Стул из дерева с замшевой<br>обивкой</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__new-price hit__price">10999р</p>
-                  </div>
-                </div>
-                <div class="sale__card">
-                  <figure class="sale__sale-mark sale__sale-mark--4 hit__mark">ХИТ</figure>
-                  <div class="sale__image-wrapper">
-                    <img class="sale__image--4" src="img/sale-light.png" alt="Торшер лакированный">
-                  </div>
-                  <div class="rating-area">
-                    <input type="radio" id="star-5" name="rating" value="5">
-                    <label for="star-5" title="«5»"></label>
-                    <input type="radio" id="star-4" name="rating" value="4">
-                    <label for="star-4" title="«4»"></label>
-                    <input type="radio" id="star-3" name="rating" value="3">
-                    <label for="star-3" title="«3»"></label>
-                    <input type="radio" id="star-2" name="rating" value="2">
-                    <label for="star-2" title="«2»"></label>
-                    <input type="radio" id="star-1" name="rating" value="1">
-                    <label for="star-1" title="«1»"></label>
-                  </div>
-                  <p class="sale__name">Торшер лакированный на<br>четырех ножках</p>
-                  <div class="sale__price-cell">
-                    <p class="sale__new-price hit__price">10999р</p>
-                  </div>
+                <div class="delivery__adv delivery__adv--3">
+                  <h3 class="delivery__h3">Курьерская доставка</h3>
+                  <hr class="delivery__h3-line">
+                  <p class="delivery__description">Доставка курьером к назначенному часу</p>
+                  <figure class="delivery__circle"><img class="delivery__icon" src="img/car-icon.png" width="49" height="48"></figure>
                 </div>
               </div>
-            </section>
-            <div class="main__pre-advantages"></div>
-            <section class="advantages">
-              <ul class="advantages__list">
-                <li class="advantages__item">
-                  <img class="advantages__img" src="img/adv1.png" alt="Банк карты" width="74" height="74">
-                  <p class="advantages__description">Оплата через любые<br>платежные системы</p>
-                </li>
-                <li class="advantages__item">
-                  <img class="advantages__img" src="img/adv2.png" alt="Грузовичок" width="74" height="74">
-                  <p class="advantages__description">Доставка по всем<br>городам России</p>
-                </li>
-                <li class="advantages__item">
-                  <img class="advantages__img" src="img/adv3.png" alt="Обмен" width="74" height="74">
-                  <p class="advantages__description">Возврат любого товара<br>в течении 30 дней</p>
-                </li>
-                <li class="advantages__item">
-                  <img class="advantages__img" src="img/adv4.png" alt="Красивый сертификат" width="74" height="74">
-                  <p class="advantages__description">Гарантия качества</p>
-                </li>
-              </ul>
             </section>
         </main>
-        <footer class="page-footer">
-          <div class="footer__wrapper">
-            <div class="footer__email">
-              <p class="footer__email-description">Мы проводим специальные акции для наших клиентов. Оформите подписку и мы будем держать Вас в курсе.</p>
-              <div class="footer__input-wrapper">
-                <input class="footer__input" type="email" placeholder="E-mail">
-                <hr class="footer__input-line">
-              </div>
-              <button class="footer__button" type="submit">Подписаться</button>
-            </div>
-            <ul class="footer__link-list">
-              <li class="footer__link-item"><a class="footer__link"><img class="footer__logo" alt="ArtD" src="img/artd.svg"></a></li>
-              <li class="footer__link-item"><a class="footer__link" href="#">О компании</a></li>
-              <li class="footer__link-item"><a class="footer__link" href="#">Доставка</a></li>
-              <li class="footer__link-item"><a class="footer__link" href="#">Наши проекты</a></li>
-            </ul>
-            <ul class="footer__contacts-list">
-              <li class="footer__contacts-item footer__contacts-item--adr">
-                <p>Адрес:<br>г. Санкт-Петербург, улица Восстания, 35</p>
-              </li>
-              <li class="footer__contacts-item">
-                <p class="footer__contacts-telephone">Телефон:<br>8(800)000-00-00</p>
-              </li>
-              <li class="footer__contacts-item">
-                <p>График работы:<br>Пн-Пт с 10.00 - 21.00</p>
-              </li>
-            </ul>
+        <footer class="footer">
+          <div class="footer__1-collumn">
+            <img class="footer__logo" src="img/logo-footer.png" width="233" height="85">
+            <p>Не является публичной офертой</p>
           </div>
+          <ul class="footer__2-collumn">
+            <li class="footer__2-item footer__2-item--header">Информация</li>
+            <li class="footer__2-item footer__2-item"><a href="#">Контакты</a></li>
+            <li class="footer__2-item footer__2-item"><a href="#">Доставка</a></li>
+            <li class="footer__2-item footer__2-item"><a href="#">О компании</a></li>
+            <li class="footer__2-item footer__2-item"><a href="#">Отзывы</a></li>
+            <li class="footer__2-item footer__2-item"><a href="#">Еще</a></li>
+          </ul>
+          <ul class="footer__2-collumn">
+            <li class="footer__2-item footer__2-item--header">Каталог</li>
+            <li class="footer__2-item footer__2-item"><a href="#">Цветы</a></li>
+            <li class="footer__2-item footer__2-item"><a href="#">Кому</a></li>
+            <li class="footer__2-item footer__2-item"><a href="#">Повод</a></li>
+            <li class="footer__2-item footer__2-item"><a href="#">Аксессуары</a></li>
+          </ul>
+          <ul class="footer__3-collumn">
+            <li class="footer__2-item footer__2-item--header">Контакты</li>
+            <li class="footer__2-item footer__2-item"><p>Телефон: <p class="white-text">+ 7 (904) 836-26-26</p></p></li>
+            <li class="footer__2-item footer__2-item">Почта: flores@mail.ru</li>
+            <li class="footer__2-item footer__2-item">Адрес: г.Санкт-Петербург,<br>пр. Мира, 21</li>
+          </ul>
+          <div  class="footer__4-column"><p>Создано на платформу </p><a href="#">B-DA</a></div>
         </footer>
         <script src="script.js"></script>
     </body>

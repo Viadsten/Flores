@@ -11,6 +11,7 @@
     max-width: 1440px;
     margin-top: 30px;
     margin-bottom: 30px;
+    background-color: #F5F5F5;
 }
 
 .advantages__list{
@@ -23,7 +24,9 @@
 .advantages__img{
     margin-bottom: 10px;
 }
-
+.advantages__description{
+    color: #A49D9D;
+}
 @media (min-width: 500px){
 
     .advantages__list{
@@ -50,9 +53,10 @@
     }
 }
 
-@media (min-width: 1280px){
+@media (min-width: 900px){
     .advantages__list{
-        width: 90%;
+        max-width: 1280px;
+        margin: 0 auto;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
